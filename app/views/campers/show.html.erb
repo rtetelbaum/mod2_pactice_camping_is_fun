@@ -1,0 +1,17 @@
+<h1>Camper Show</h1>
+
+<h3>Camper Name: <%= @camper.name %></h3>
+
+<h3>Camper Age: <%= @camper.age %></h3>
+
+<h3>Camper Activities:</h3>
+
+<ul>
+	<% unless @camper.activities.empty? %>
+		<% @camper.activities.each do |activity| %>
+			<li><%= activity.name %></li>
+		<% end %>
+	<% else %>
+		<li>This camper is boring. No activities.</li>
+	<% end %>
+</ul>
